@@ -1,0 +1,16 @@
+{
+  "name": "ywca-workspace",
+  "version": "0.0.1",
+  "description": "YWCA Workspace for Kevin Fahy",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kevinbrianfahy/ywebca.git"
+  },
+  "author": {
+    "name": "Kevin Fahy",
+    "email": "kevinbrianfahy@gmail.com",
+    "url": "https://github.com/kevinbrianfahy"
+  },
+  "license": "MIT",
+  "dependencies": {}
+}
