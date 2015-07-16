@@ -6,6 +6,8 @@
 Exer.expressions1 = function () {
 
   return (1);
+  // (3+4) / 7
+  //"over "+(9*1000)
 
 };
 
@@ -16,6 +18,7 @@ Exer.statements1 = function () {
 
   // Write a statement that is not undefined.
   "aldfdla";
+  //
 };
 /* jshint ignore:end */
 
@@ -95,6 +98,13 @@ Exer.variables7 = function ( change ) {
  change = "$" + change;
   // Return that string.
 return change;
+//var QUARTER = .25
+//var DIME = .10
+//var CURRENCY = "$"
+// change +=QUARTER
+//change -=DIME
+//change = CURRENCY + change
+//return change
 };
 
 
@@ -113,6 +123,15 @@ Exer.keywords1 = function ( one, two ) {
   }     
 
 /*
+different solution
+function ( true_, two ) {
+var new_var = 2;
+  var const_var = two+2;
+  true_ += "2";
+  var function_ = new_var + const_var + true_ + two;
+  return function_;
+};
+original question
 Exer.keywords1 = function ( true, two ) {
   var new = 2;
   var const = two+2;
@@ -175,7 +194,11 @@ Exer.console3 = function ( data ) {
 
   // your answer here
   console.log("The magic word is " + "\"" + data + "\"")
-
+//console.log('The magic word is "' + data + '"')
+//var output= "";
+//output+="The magic word is \"";
+//output+= data;
+//output+= "\"";
 };
 
 // Console 4
@@ -204,6 +227,8 @@ Exer.return1 = function () {
 
   // your work goes here
 console.log(magicFunc())
+//var output = magicFunc();
+//console.log(output);
 };
 
 // Return 2
@@ -212,11 +237,7 @@ Exer.return2 = function () {
 
   // your work goes here
 return magicFunc();
-// I am getting this correct, but I do not understand
-// how this is different than the "Return 1" question. I am under the impression
-// using console.log causes the result of 'magicFunc' to be returned, so asking
-// the computer to return the result of 'magicFunc' after logging it seems
-// redundant
+
 };
 
 // Return 3
@@ -231,6 +252,8 @@ console.log(me)
 
   // why doesn't the below work?
   // return strShift("abczABCZ") + "123";
+  //because the test only wants us to call the funciton once. I suppose to
+  //practice using variables.
 };
 
 // Return 4
@@ -238,6 +261,11 @@ console.log(me)
 // `magicFunc`.
 Exer.return4 = function () {
 console.log(magicFunc()+ "" + magicFunc())
+//another answer
+//var output="";
+//output += magicFunc();
+//output+= magicFunc();
+//console.log(output)
 
 };
 
@@ -258,6 +286,9 @@ var once = strShift("a S d F j K l");
 var b = strShift(once);
   // A return statement.
 return strShuffle(a, b)
+//var a=strShift("abcABC123!@#");
+//var b=strShift(strShift("a S d F j K l"));
+//return strShuffle(a,b);
 };
 
 /*-------------------------    PROMPT AND CONFIRM    -------------------------*/
@@ -289,6 +320,9 @@ Exer.control1 = function () {
 var number = prompt("pick a number", "");
   // Print that number to the console
   console.log(number)
+  //another answer
+  //console.log(prompt("pick a number"))
+  
 
 };
 
@@ -310,7 +344,9 @@ var ding = bar + foo + bar;
   // Save the user's response in a new variable called `quux`.
 var quux = confirm(strReverse(ding));
   // Return the opposite of `quux`.
-return ! quux;
+return !quux;
+//last step could be true!=quux but they don't recommend - I'd like to think about that
+//or quux==false
 };
 
 /*-----------------------    CONDITIONAL EXECUTION    ------------------------*/
@@ -320,11 +356,13 @@ return ! quux;
 Exer.condition1 = function ( isSerious ) {
 
 console.log("Welcome to Camelot!");
+// If `isSerious` is false, output the message:
+// On second thoughts, let's not go to Camelot. It is a silly place.
 if (isSerious==false)
+// also works to say if (!isSerious) or if(isSerious!=true)
   console.log("On second thoughts, let's not go to Camelot. It is a silly place.");
 
-  // If `isSerious` is false, output the message:
-  //     On second thoughts, let's not go to Camelot. It is a silly place.
+  
 };
 
   // Conditional 2
@@ -334,15 +372,17 @@ Exer.condition2 = function ( temperature ) {
   // If temperature is greater than or equal to 70
   // Then output:
   //     Hermit crab warning!
-if (temperature >= 70)
-  console.log("Hermit crab warning!")
+if (temperature >= 70) {
+  console.log("Hermit crab warning!");
+
   // Otherwise, output
   //     Catch of the day: influenza, $14/lb.
-else 
-  console.log("Catch of the day: influenza, $14/lb.")
+} else {
+  console.log("Catch of the day: influenza, $14/lb.");
   // In either case, also print
   //     Thanks for visiting Pier One and Three Quarters!
-console.log("Thanks for visiting Pier One and Three Quarters!")
+}
+console.log("Thanks for visiting Pier One and Three Quarters!");
 };
 
 // Conditional 3
@@ -413,6 +453,18 @@ while (num > 0) {
   console.log(num + " sheep");
   num = num - 1;
 }
+//you could also log the console this way:
+//console.log(num-- + "sheep")
+//another solution to the problem:
+//var max = 100;
+//var min = 20;
+//var step = 5;
+//
+//var num=max;
+//while(num>min){
+//  console.log(num + " sheep");
+//  num -=step
+//}
 };
 
 /* jshint ignore:start */
@@ -450,8 +502,7 @@ var num = 3;
 do {
   console.log(num%3);
   num++;
-  } 
-while (num < 9 );
+  } while (num < 9 );
 };
 
 /* jshint ignore:start */
@@ -474,6 +525,19 @@ console.log("Train# " + trainNum + ": In flight!?");
 trainNum++;
 console.log("Train# " + trainNum + ": In flight!?");
 };
+
+/*
+another solution:
+var trainNum = 1;
+console.log("Train# " + trainNum++ + ": In flight!?");
+console.log("Train# " + trainNum++ + ": In flight!?");
+console.log("Train# " + trainNum++ + ": In flight!?");
+console.log("Train# " + trainNum++ + ": In flight!?");
+console.log("Train# " + trainNum++ + ": In flight!?");
+console.log("Train# " + trainNum++ + ": In flight!?");
+console.log("Train# " + trainNum++ + ": In flight!?");
+};
+*/
 /* jshint ignore:end */
 
 /*---------------------------    INDENTING CODE    ---------------------------*/
@@ -531,6 +595,14 @@ console.log( scream );
  // }
  // scream += "H!"
 //  console.log( scream );
+//another way to write it:
+//var scream = "...";
+//  for ( var count = 0 ; count < 7;  count++) {
+ //   console.log( scream );
+ //   scream = "    " + scream + "AA";
+ // }
+ // scream += "H!"
+ // console.log( scream );
 
 
 /* jshint ignore:start */
@@ -695,7 +767,13 @@ Exer.capitalization1 = function() {
 //    }
 //  }
   /* jshint ignore:end */
+/* command click in each line and what you type goes in all three!!!!!
+my name is Kevin
+my name is Kevin
+my name is Kevin
 
+my name is Kevin
+*/
 /*------------------------------    COMMENTS    ------------------------------*/
 
 Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
