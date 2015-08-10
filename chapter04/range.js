@@ -1,29 +1,4 @@
-var range = function(a, b, c) {
-  var x = [];
-  if (arguments.length ==3 && c>0) {
-    for (var y = a; y<=b; y+=c) {
-    x.push(y);
-    }
-  } else if (arguments.length ==3 && c<0) {
-    for (var y = a; y>=b; y+=c) {
-    x.push(y);
-    }
 
-  } else if (arguments.length==2) {
-      for (var y = a; y<=b; y++) {
-      x.push(y);
-      }
-  }
-return x;
-}
-
-var sum = function(a) {
-  var add = 0;
-  for (var i= 0; i<a.length; i++) {
-    add+=a[i];
-  }
-  return add;
-}
 
 
 
@@ -34,7 +9,12 @@ var sum = function(a) {
 
 
 /***********************    DANGER ZONE DO NOT CROSS    ***********************/
-if(!Exer) Exer = {};
-for (value in this)
-  Exer[value] = this[value]; 
-if(module) module.exports = Exer;
+if (typeof Exer === 'undefined') Exer = {};
+
+if (typeof range !== 'undefined') Exer.range = range;
+if (typeof sum !== 'undefined') Exer.sum = sum;
+if (typeof encrypt !== 'undefined') Exer.encrypt = encrypt;
+if (typeof decrypt !== 'undefined') Exer.decrypt = decrypt;
+
+if (typeof module === 'undefined') module = {};
+module.exports = Exer;
