@@ -119,10 +119,10 @@ var arguments = function() {
 
 /*--------------------------    THE MATH OBJECT    --------------------------*/
 var math = function(stringornumber) {
-  if (stringornumber==string) {
+  if (typeof stringornumber=="string") {
     return Math.PI;
   } else {
-    return Math.random()*stringornumber
+    return Math.random()*stringornumber;
   }
 }
 
