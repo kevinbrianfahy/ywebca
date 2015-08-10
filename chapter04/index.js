@@ -1,38 +1,38 @@
 /*-----------------------------    DATA SETS    -----------------------------*/
 
 /*------------------------------    Data Sets 1    ------------------------------*/
-var dataOne= function(a) {
-  console.log(a[2], a[4], a[7], a[a.length-1])
+var dataOne= function(array) {
+  console.log(array[2], array[4], array[7], array[array.length-1])
 }
 
 
 /*-------------------------------   Data Sets 2    ----------------------------*/
-var dataTwo = function(a) {
-  for(i=0;i<a.length;i++) {
-  console.log(a[i])
+var dataTwo = function(array) {
+  for(i=0;i<array.length;i++) {
+  console.log(array[i])
   }
 }
 
 
 /*-----------------------------    PROPERTIES    ----------------------------*/
-var properties = function(a) {
-  console.log(a.legs)
-  console.log(a.isAGoodBoy);
+var properties = function(object) {
+  console.log(object.legs)
+  console.log(object.isAGoodBoy);
 }
 
 
 
 /*-------------------------------    METHODS    -----------------------------*/
-var methods = function(a) {
-  a.bark();//logs the current .barkNoise
-  if (a.isAGoodBoy() == true) {//sets value for .goodboy
-    a.setBark("arf...");//accesses .barkSound
+var methods = function(object) {
+  object.bark();//logs the current .barkNoise
+  if (object.isAGoodBoy() == true) {//sets value for .goodboy
+    object.setBark("arf...");//accesses .barkSound
   } else {
-    a.setBark("whimper");//accesses .barkSound
+    object.setBark("whimper");//accesses .barkSound
   }
-  console.log(a.getBark());//accesses .barkSound
-  a.bark();//logs the current .barkNoise
-  a.isAGoodBoy(true);//sets value for .goodboy
+  console.log(object.getBark());//accesses .barkSound
+  object.bark();//logs the current .barkNoise
+  object.isAGoodBoy(true);//sets value for .goodboy
 }
 
 
@@ -44,8 +44,8 @@ var objects = function() {
     getBark: function() {
       return barkSound;
     },
-    setBark: function(a) {
-      barkSound=a;
+    setBark: function(arg) {
+      barkSound=arg;
     },
     tricks: ["roll over", "fetch", "play Beethoven's 5th"]
   };
@@ -54,16 +54,16 @@ var objects = function() {
 
 
 /*----------------------------    MUTABILITY    -----------------------------*/
-var mutability = function(a,b) {
-  if (a==b) {
-    console.log(a);
-  } else if (a.color==b.color) {
+var mutability = function(object1, object2) {
+  if (object1==object2) {
+    console.log(object1);
+  } else if (object1.color==object2.color) {
     console.log("color matches");
-  } else if (a.quantity==b.quantity) {
+  } else if (object1.quantity==object2.quantity) {
     console.log("quantity matches");
-  } else if (a.isA==b.isA) {
+  } else if (object1.isA==object2.isA) {
     console.log("isA matches")
-  } else console.log (a,b)
+  } else console.log (object1,object2)
 }
 
 
@@ -76,34 +76,34 @@ var maps = function (accounts) {
 
 
 /*----------------------------    ARRAYOLOGY    -----------------------------*/
-var arrayology = function(a) {
-  for (var i=0; i<a.length; i++) {
-    if (a[i]=="fnord") {
+var arrayology = function(array) {
+  for (var i=0; i<array.length; i++) {
+    if (array[i]=="fnord") {
       var first=i;
       break;
     }
   }
-  var split= a.slice(first+1);
+  var split= array.slice(first+1);
   for (var i = 0; i<split.length; i++) {
     if (split[i]=="fnord") {
       var second=i;
       break;
     }
   }
-  return a.slice(0,first+1).concat(split.slice(second));
+  return array.slice(0,first+1).concat(split.slice(second));
 };
 
 
 /*-------------------    STRINGS AND THEIR PROPERTIES    --------------------*/
-var strings = function(a) {
-  var once = a.indexOf("fnord");
-  var last = a.length;
-  var split=a.slice(once+5);
+var strings = function(string) {
+  var once = string.indexOf("fnord");
+  var last = string.length;
+  var split=string.slice(once+5);
   var second=split.indexOf("fnord");
   if (split.indexOf("fnord")==-1) {
     return split;
   } else {
-    return a.slice(once+5,once+5+second)
+    return string.slice(once+5,once+5+second)
   }
 };
 
