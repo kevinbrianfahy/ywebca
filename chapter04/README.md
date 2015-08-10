@@ -143,7 +143,7 @@ This exercise corresponds to [this section of the text](http://eloquentjavascrip
 
 8.  Call `.bark()`.
 
-9.  Call `.isAGoodBoy()` with the argument `true`.
+9.  Call `.isAGoodBoy()` with the argument `true`. 
 
 <br / >
 
@@ -294,7 +294,7 @@ This exercise corresponds to [this section of the text](http://eloquentjavascrip
 3.  `arguments` should use a loop to find the sum of all the arguments it
     recieves.
 
-4.  `arguments` should return that sum.
+4.  `arguments` should return that sum. 
 
 <br / >
 
