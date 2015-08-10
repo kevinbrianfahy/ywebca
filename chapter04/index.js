@@ -68,10 +68,10 @@ var mutability = function(a,b) {
 
 
 /*--------------------------    OBJECTS AS MAPS    --------------------------*/
-var maps = function (a) {
-  for (any in a)
-  if (any[0] == 'T' && a[any].owed==0)
-  console.log(any + " is paid up!");
+var maps = function (accounts) {
+  for (user in accounts)
+  if (user[0] == 'T' && accounts[user].owed==0)
+  console.log(user + " owes $0");
 };
 
 
@@ -118,8 +118,12 @@ var arguments = function() {
 
 
 /*--------------------------    THE MATH OBJECT    --------------------------*/
-var math = function() {
-
+var math = function(stringornumber) {
+  if (stringornumber==string) {
+    return Math.PI;
+  } else {
+    return Math.random()*stringornumber
+  }
 }
 
 
