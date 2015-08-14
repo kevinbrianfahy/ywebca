@@ -67,7 +67,7 @@ Exer.parameters1 = function() {  //
       return "SPACE CUBE DETECTED!!";
     } else {
       return "THIS IS NO SPACE CUBE!";
-    }  
+    }
   }
   return spaceCubeDetector;
 
@@ -180,7 +180,7 @@ Exer.nestExample = function() {
     console.log(bar); // Nest 4: What value of bar is logged?
     console.log(quux); // Nest 5: What value of quux is logged?
 
-    var robin = function() { 
+    var robin = function() {
       var bar = 13;
       quux = bar;
       console.log(quux); // Nest 11: What value of quux is logged?
@@ -448,7 +448,7 @@ Exer.closures1 = function(spaceCubeDetector) {
       }
     }
   }
-  return spaceCubeDetector; 
+  return spaceCubeDetector;
 };
 
 /*******************************    Closures 2    *******************************/
@@ -573,8 +573,8 @@ Exer.sideEffectExample = function() {
 Exer.sideEffect1 = function() {
   pairsOfLegsToTotalLegs()
   hasTail();
-  
-  
+
+
 
 };
 
@@ -586,6 +586,6 @@ Exer.sideEffect2 = function() {
   getBarkNoise();
   setBarkNoise();
   bark();
-  
+
 
 };

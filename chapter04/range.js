@@ -45,10 +45,6 @@ var encrypt = function(string, keyLetter) {
     return encryptedString;
 };
 
-Create another function called decrypt that accepts two parameters: a
-string to decrypt and the key the string has been shifted with. decrypt
-should return the decrypted string.
-
 
 var decrypt = function(string, keyLetter) {
   var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
