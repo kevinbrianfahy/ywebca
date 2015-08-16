@@ -1,3 +1,20 @@
+var arrayToList = function(array) {
+var last = array.length-1;
+var list = null
+for (index=last; index>=0; index--) {
+  	var x = array[index];
+  	list = {value: x, rest: list};
+  }
+  return list;
+}
+
+var listToArray = function(list) {
+var array =[]
+for (var node = list; node; node = node.rest) {
+  array.push(node.value);
+  }
+  return array;
+}
 
 
 
